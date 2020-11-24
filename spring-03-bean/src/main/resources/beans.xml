@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.school.Address">
+        <property name="address" value="休伯利安"/>
+    </bean>
+    <bean id="student" class="com.school.Student">
+        <property name="name" value="芽衣"/>
+        <property name="address" ref="address"/>
+        <property name="books">
+            <set>
+                <value>三国演义</value>
+                <value>水浒传</value>
+            </set>
+        </property>
+        <property name="friends">
+            <map>
+                <entry key="同桌" value="符华"/>
+                <entry key="后桌" value="琪亚娜"/>
+            </map>
+        </property>
+        <property name="games">
+            <list>
+                <value>崩坏3rd</value>
+                <value>Re.Dive</value>
+            </list>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="学号">1245678951</prop>
+                <prop key="身份证">23654646456</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
